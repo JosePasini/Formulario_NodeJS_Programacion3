@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
@@ -13,7 +16,7 @@ app.use((req, res, next) => {
    res.status(404).render('404', { error: 'ERROR. 404 not found'})
 })
 
-app.listen(3000, (req, res) => {
-    console.log("Conectado en puerto " , 3000);
+app.listen(9000, (req, res) => {
+    console.log("Conectado en puerto " , 9000);
 })
 console.log("Ruta: " + __dirname + "/public")

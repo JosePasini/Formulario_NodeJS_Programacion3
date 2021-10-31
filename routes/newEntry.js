@@ -1,21 +1,31 @@
 const express = require('express');
 const router = express.Router();
 
+let entries = [];
+
 router.get('/newEntry', (req, res) => {
     res.render("newEntry")
     console.log(req.body)
 })
 
 router.post('/newEntry', (req, res) => {
-    console.log(req.body)
-    //res.send('Recibido');
+    
+    if (!req.body.title || !req.body.body) {
+        console.log("Vacio")
+    }
+    
+    let newEntryLet = [
+        {
+            title: req.body.title,
+            body: req.body.body,
+        }
+    ];
+    
+    newEntryLet.forEach(e => {
+        console.log(e);
+    })
+
     res.render('newEntry');
-    //const parametro = req.body;
-    //console.log(parametro.body)
-    /*
-    if (!req.title || !req.body) {
-        res.send(400).send("Debe enviar titulo y cuerpo");
-    }*/
 })
 
 module.exports = router;
