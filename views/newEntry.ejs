@@ -12,11 +12,10 @@
             name="title" 
             id="title" 
             class="form-control" 
-            placeholder="Ingrese titulo"
+            placeholder="Enter Text"
             required>
         </div>
         
-
         <div class="form-group">
             <label for="body">Entry Text</label>
             <textarea 
@@ -24,21 +23,17 @@
                 id="body"
                 name="body"
                 rows="3" 
-                placeholder="Ingrese texto"
+                placeholder="Enter Body Text"
                 required></textarea>
         </div>
     
     <div class="form-group">
         <input type="submit" 
-        value="Enviar Formulario"
+        value="Send"
         class="btn btn-primary">
     </div>
 </form>
-    
 </div>
-
-
-
 
 <table class="table">
     <thead class="thead-dark">
@@ -48,8 +43,6 @@
             <th scope="col">Published</th>
         </tr>
     </thead>
-
-
     <tbody>
         <% entries.forEach(function(e){ %>
         <tr>
@@ -61,7 +54,5 @@
     </tbody>
 </table>
 
-
 <%- include("template/footer.ejs") %>
-
 </body>

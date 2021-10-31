@@ -12,15 +12,11 @@ app.use('/', require('./routes/index'));
 app.use('/', require('./routes/newEntry'));
 app.use('/', require('./routes/servicios'));
 
-app.get('/get', (req, res) => {
-    res.json('Bien')
-    console.log(app.locals.entries);
-})
 
 app.use((req, res, next) => {
    res.status(404).render('404', { error: 'ERROR. 404 not found'})
 })
 
-app.listen(9000, (req, res) => {
-    console.log("Conectado en puerto " , 9000);
+app.listen(3000, (req, res) => {
+    console.log("Conectado correctamente al servidor en puerto 3000");
 })
