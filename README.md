@@ -17,5 +17,5 @@ Asegurarse de que estén todos los campos completados:
 ![r2](https://user-images.githubusercontent.com/65823769/139601111-00a28358-2812-4f9b-aee5-06c65a4288f2.png)
 
 Datos agregados:
-![r4](https://user-images.githubusercontent.com/65823769/139601123-0f03ef6b-53af-400c-a632-72d1e66f3677.png)
+![r3](https://user-images.githubusercontent.com/65823769/139601147-45aa0e6f-5f5e-415b-ad68-3c53b4e87833.png)
 
