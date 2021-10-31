@@ -9,8 +9,13 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static(__dirname + "/public"));
 app.use('/', require('./routes/index'));
-app.use('/', require('./routes/servicios'));
 app.use('/', require('./routes/newEntry'));
+app.use('/', require('./routes/servicios'));
+
+app.get('/get', (req, res) => {
+    res.json('Bien')
+    console.log(app.locals.entries);
+})
 
 app.use((req, res, next) => {
    res.status(404).render('404', { error: 'ERROR. 404 not found'})
@@ -19,4 +24,3 @@ app.use((req, res, next) => {
 app.listen(9000, (req, res) => {
     console.log("Conectado en puerto " , 9000);
 })
-console.log("Ruta: " + __dirname + "/public")

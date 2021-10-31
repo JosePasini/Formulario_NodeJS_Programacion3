@@ -1,18 +1,18 @@
 <%- include("template/cabecera.ejs" , { tituloWeb: ' ~ ~ Index.ejs ~ ~'}) %>
 
-<body>
+<body class="container">
+    <!-- Traigo la cabecera de los Templates -->
     <div class="container">
         <%- include("template/headers.ejs") %>
     </div>
 
+    <!-- Título y Subtítulo -->
     <div class="container">
         <h1 class="text-primary" style="text-align: center;">Titulo de mi sitio web</h1>
         <h2 style="text-align: center;">  <%= titulo  %>  </h2>
+
     </div>
 
-    <div class="container">
-        <%- include("template/footer.ejs") %>
-    </div>
 
     <div class="container">
         <h3>Otro contenier</h3>
@@ -24,7 +24,12 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus earum consequuntur? Quisquam maxime itaque error laborum. Fuga illum quaerat rem, facere, accusantium vero reprehenderit nemo, commodi praesentium autem pariatur?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, nam vitae! Repellendus consectetur nulla cum illo ratione iste aliquid hic excepturi facilis numquam dignissimos corrupti consequuntur, omnis molestias, delectus repellat.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus earum consequuntur? Quisquam maxime itaque error laborum. Fuga illum quaerat rem, facere, accusantium vero reprehenderit nemo, commodi praesentium autem pariatur?</p>
-
     </div>
+
+    <!-- Traigo el footer de los Templates-->
+    <div class="container">
+        <%- include("template/footer.ejs") %>
+    </div>
+
 </body>
 </html>

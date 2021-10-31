@@ -1,31 +1,34 @@
 const express = require('express');
+const app = express();
 const router = express.Router();
 
-let entries = [];
 
-router.get('/newEntry', (req, res) => {
+let entries = [];
+app.locals.entries = entries;
+
+
+app.get('/newEntry', (req, res) => {
     res.render("newEntry")
-    console.log(req.body)
 })
 
-router.post('/newEntry', (req, res) => {
+app.post('/newEntry', (req, res) => {
     
     if (!req.body.title || !req.body.body) {
         console.log("Vacio")
     }
-    
-    let newEntryLet = [
+    let newEntryLet = 
         {
             title: req.body.title,
             body: req.body.body,
-        }
-    ];
+            published: new Date(),
+        };
     
-    newEntryLet.forEach(e => {
-        console.log(e);
+    entries.push(newEntryLet);
+    
+    console.log(app.locals.entries);
+
+    res.redirect('newEntry');
     })
 
-    res.render('newEntry');
-})
-
-module.exports = router;
+module.exports = app;
+//module.exports = router;

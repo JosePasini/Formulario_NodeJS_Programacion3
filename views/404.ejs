@@ -5,12 +5,16 @@
 <nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
 </nav>
-<%- include("template/navbar.ejs")%>
+<div class="form-row text-center margin-left: auto; margin-right:auto;">
+  <div class="col-12">
+    <h1 style="text-align: center;">EJS 404</h1>
+    <h2 style="text-align: center;"><%= error  %>  </h2>
 
-    <h1>EJS 404</h1>
-    <h2>  <%= error  %>  </h2>
-
-<%- include("template/footer.ejs")%>
+        <a class="btn btn-primary btn-lg" href="index" role="button" pull="center">Index</a>
+      </div>
+    </div>
+    
+    <%- include("template/footer.ejs")%>
 
 </body>
 </html>
