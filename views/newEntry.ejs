@@ -1,0 +1,42 @@
+<%- include("template/cabecera.ejs" , { tituloWeb: ' ~ ~ Index.ejs ~ ~'}) %>
+
+<body class="container">
+    <%- include("template/headers.ejs") %>
+    
+    <div class="col-xs-8 col-xs-offset-2">
+        <h2 class="text-center">Write a New Entry</h2>
+        <form method="post">
+            <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text"
+            name="title" 
+            id="title" 
+            class="form-control" 
+            placeholder="Ingrese titulo">
+        </div>
+        
+
+        <div class="form-group">
+            <label for="body">Entry Text</label>
+            <textarea 
+            class="form-control"
+            id="body" 
+            name="body" 
+            rows="3"
+            placeholder="Ingrese texto"
+            required>
+        </textarea>
+        </div>
+    
+    <div class="form-group">
+        <input type="submit" 
+        value="Enviar Formulario"
+        class="btn btn-primary">
+    </div>
+</form>
+    
+</div>
+
+<%- include("template/footer.ejs") %>
+
+</body>
